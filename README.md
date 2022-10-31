@@ -1,0 +1,1 @@
+This project deals with front-end layout of quiz application.
