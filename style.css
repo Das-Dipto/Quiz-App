@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.main-box{
+    width: 40%;
+    margin-top: 7rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: white;
+    box-shadow: 0 0 18px 4px rgb(231, 231, 231);
+    border-radius: 8px;
+    position: relative;
+}
+
+.top-bar{
+    position: absolute;
+    width: 100%;
+    height: 2%;
+    left:0;
+    top:0;
+    background-color: slateblue;
+    border-radius: 8px 8px 0px 0px;
+}
+
+button{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    background-color: rgb(120, 105, 214);
+    color:white;
+    padding:0.5rem 1.5rem;
+    outline:none;
+    border-style: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover{
+    background-color: deepskyblue;
+    border-radius:10px;
+}
+
+.counter{
+    width: 80%;
+    margin-top: 1.5rem;
+    text-align: end;
+    bottom: 2rem;
+}
+
+.content{
+    width: 80%;
+    margin-top:1rem;
+    margin-left:1rem;
+}
+
+.bottom-bar{
+    position: absolute;
+    width: 100%;
+    height: 2%;
+    right:0;
+    bottom:0;
+    background-color: slateblue;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.quiz-box{
+    display: none;
+    width: 40%;
+    margin-top: 5rem;
+    padding: 0.6rem 1rem;
+    border:1px solid red;
+}
+
+.quiz-box h3{
+    font-size: 1.5rem;
+}
+
+form{
+    width: 80%;
+    margin-top:1rem;
+    margin-left:1rem;
+}
+
+form input{
+    width: 16px;
+    height: 16px;
+}
+.option-flex{
+   
+    display: flex;
+    align-items: center;
+    
+}
+
+form label{
+    font-size: 1.3rem;
+    margin-left: 0.4rem;
+    line-height: 2;
+}
