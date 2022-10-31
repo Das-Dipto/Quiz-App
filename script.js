@@ -48,20 +48,20 @@ let timer = setInterval(()=>{
 }, 1000)
 
 
-let inc = 1;
-button.addEventListener('click', ()=>{
-    if(inc == quizbox.length){
-        inc = quizbox.length - 1 ;
-        quizbox[quizbox.length - 1].style.display = 'block';
-        content.innerHTML =  quizbox[quizbox.length - 1].innerHTML; 
-        flex_quizbox[quizbox.length - 1].style.display = 'none';
-    }
+// let inc = 1;
+// button.addEventListener('click', ()=>{
+//     if(inc == quizbox.length){
+//         inc = quizbox.length - 1 ;
+//         quizbox[quizbox.length - 1].style.display = 'block';
+//         content.innerHTML =  quizbox[quizbox.length - 1].innerHTML; 
+//         flex_quizbox[quizbox.length - 1].style.display = 'none';
+//     }
 
-    else{
-        quizbox[inc].style.display = 'block';
-        content.innerHTML =  quizbox[inc].innerHTML; 
-        flex_quizbox[inc].style.display = 'none';
-        inc++;
-    }
+//     else{
+//         quizbox[inc].style.display = 'block';
+//         content.innerHTML =  quizbox[inc].innerHTML; 
+//         flex_quizbox[inc].style.display = 'none';
+//         inc++;
+//     }
 
-})
+// })
