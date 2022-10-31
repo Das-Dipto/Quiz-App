@@ -1,1 +1,1 @@
-This project deals with front-end layout of quiz application.
+This project deals with Quiz Application related to online exam.
