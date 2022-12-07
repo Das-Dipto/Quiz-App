@@ -4,64 +4,94 @@ let flex_quizbox = document.querySelectorAll('.flex-container .quiz-box');
 let time = document.querySelector(`span`);
 let button = document.querySelector('button');
 let counter = document.querySelector('.counter');
-let i = 1;
-let count = 10;
-let a = false;
+let next = document.querySelector('#button');
 content.innerHTML = quizbox[0].innerHTML;
+let start = 1;
 
-let content_show = setInterval(()=>{
+let count,count1,count2,count3;
+count=count1=count2=count3=0;
+let num = 0;
+let i = 1;
 
-    if(i == quizbox.length){
-         clearInterval(content_show);
-         a = true;
-         counter.innerHTML = `The time is over`;
-         counter.style.color = 'red';
-         counter.style.fontWeight = `700`;
-         console.log('stopped');
+const add = (param) =>{
+    num = num + param;
+    if (i >= quizbox.length ){
+        console.log(`Total marks ${num}`);
     }
-   
     else{
-        quizbox[i].style.display = 'block';
-        flex_quizbox[i].style.display = 'none';
-        content.innerHTML = quizbox[i].innerHTML; 
+        i++;
+    }
+}
+
+let name1 = document.getElementsByName('Ivy');
+next.addEventListener('click', ()=>{
+    name1.forEach((item, index)=>{
+    if ( item.checked) {
+        let k =  item.value
+        if ( k == 8){
+         count1 = count1 + 10;
+         add(count1);
+       }
+       else{
+        add(count);
+       }
+    }
+    else if(!item.checked){
+        add(count);
+    }
+})
+})
+
+let name2 = document.getElementsByName('UN');
+next.addEventListener('click', ()=>{
+name2.forEach((item, index)=>{
+    if ( item.checked) {
+        let k =  item.value
+        if ( k == 7){
+         count2 = count2 + 10;
+         add(count2);
+       }
+       else{
+        add(count);
+       }
+    }
+})
+})
+
+let name3 = document.getElementsByName('USA');
+next.addEventListener('click', ()=>{
+name3.forEach((item, index)=>{
+    if ( item.checked) {
+        let k =  item.value
+        if ( k == 52){
+         count3 = count3 + 10;
+         add(count3);
+       }
+       else{
+        add(count);
+       }
+    }
+})
+})
+
+
+
+
+
+next.addEventListener('click', ()=>{
+       
+    if(start >= quizbox.length ){
+        next.style.display = 'none';
+        counter.innerHTML = `Quiz complete`;
     }
 
-    i++;
-  
-},10000)
-
-
-let timer = setInterval(()=>{
-    if(a){
-        clearInterval(timer);
+    else{
+         content.innerHTML = quizbox[start].innerHTML;
+         start++;
     }
- 
-    if(count == 0){
-        count = 10;
-    }
-  
-  
-    time.innerHTML = count;
-    count--;
     
-  
-}, 1000)
+})
 
 
-// let inc = 1;
-// button.addEventListener('click', ()=>{
-//     if(inc == quizbox.length){
-//         inc = quizbox.length - 1 ;
-//         quizbox[quizbox.length - 1].style.display = 'block';
-//         content.innerHTML =  quizbox[quizbox.length - 1].innerHTML; 
-//         flex_quizbox[quizbox.length - 1].style.display = 'none';
-//     }
 
-//     else{
-//         quizbox[inc].style.display = 'block';
-//         content.innerHTML =  quizbox[inc].innerHTML; 
-//         flex_quizbox[inc].style.display = 'none';
-//         inc++;
-//     }
 
-// })
